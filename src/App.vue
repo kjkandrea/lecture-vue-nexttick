@@ -18,7 +18,7 @@ export default {
   methods: {
     onClickSearchToggle () {
       this.isSearch = !this.isSearch
-      this.$refs.inputSearch.focus()
+      this.$nextTick(() => this.$refs.inputSearch.focus())
     }
   }
 }
